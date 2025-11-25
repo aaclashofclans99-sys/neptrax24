@@ -41,14 +41,13 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
   return (
     <>
       {/* Mobile Floating Navbar */}
-      <nav className="md:hidden fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300">
+      <nav className="md:hidden fixed top-4 left-4 right-4 z-50 transition-all duration-300">
         <div
-          className="flex items-center justify-between gap-4 px-4 py-3 rounded-full backdrop-blur-xl border border-white/10 shadow-2xl"
+          className="flex items-center justify-between w-full px-5 py-3.5 rounded-full backdrop-blur-xl border border-white/10 shadow-2xl"
           style={{
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
+            background: 'rgba(13, 17, 23, 0.6)',
             backdropFilter: 'blur(20px) saturate(180%)',
             WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-            backgroundColor: 'rgba(13, 17, 23, 0.5)',
           }}
         >
           <button
@@ -70,13 +69,13 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
+            className="p-2 hover:opacity-80 transition-opacity"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
-              <X size={20} className="text-white" />
+              <X size={24} className="text-white" />
             ) : (
-              <Menu size={20} className="text-white" />
+              <Menu size={24} className="text-white" />
             )}
           </button>
         </div>

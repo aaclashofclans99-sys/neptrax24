@@ -54,15 +54,17 @@ export default function MobileGradientBg() {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    135deg,
-    #000000 0%,      /* black */
-    #1a0a3e 20%,     /* deep purple */
-    #4F6BED 50%,     /* vibrant blue */
-    #8B4FE9 80%,     /* deep purple */
-    #000000 100%     /* black */
+    180deg,
+    #0a1628 0%,      /* dark navy blue */
+    #1a2b4f 15%,     /* darker blue */
+    #2d3f6e 35%,     /* medium navy */
+    #4a3d7c 55%,     /* purple-blue blend */
+    #5f3a88 70%,     /* deeper purple */
+    #2d1f4f 85%,     /* dark purple */
+    #1a0f2e 100%     /* very dark purple */
   );
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  background-size: 100% 200%;
+  animation: gradientShift 20s ease infinite;
 }
         }
 

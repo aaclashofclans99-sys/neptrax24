@@ -104,11 +104,11 @@ export default function Home({ onNavigate }: HomeProps) {
 
         {!isMobile && <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#0d1117] to-[#1e3a8a] opacity-70"></div>}
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-16 lg:pt-32">
-          <div className="max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 w-full pt-20 md:pt-16 lg:pt-32">
+          <div className="max-w-3xl mx-auto lg:mx-0 text-left md:text-center lg:text-left">
 <ScrollReveal direction="up" delay={100} duration={0.8}>
 <h1
-  className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font text-[#f1f5f9] mb-4 sm:mb-6 leading-tight"
+  className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-[#f1f5f9] mb-5 sm:mb-6 leading-tight md:leading-tight"
   style={{ fontFamily: 'Inter, sans-serif' }}
 >
 Launch your brand online with a website built for success
@@ -116,65 +116,60 @@ Launch your brand online with a website built for success
 </ScrollReveal>
 
             <ScrollReveal direction="up" delay={200} duration={0.8}>
-              <p className="text-base sm:text-lg md:text-xl text-[#FFFFFF] mb-6 sm:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-4 sm:px-0">
+              <p className="text-base sm:text-lg md:text-xl text-[#cbd5e1] mb-8 sm:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Guiding businesses from idea to digital growth with powerful websites
               </p>
             </ScrollReveal>
 
 <ScrollReveal direction="up" delay={300} duration={0.8}>
-  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 sm:mb-16 justify-center lg:justify-start px-4 sm:px-0">
+  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-16 justify-start md:justify-center lg:justify-start">
     {/* Book a Call Button */}
     <motion.button
       onClick={() => window.open('https://cal.com/neptrax', '_blank')}
-      className="px-8 sm:px-12 md:px-16 py-3 sm:py-4 rounded-full bg-gradient-to-r from-[#2563eb] to-[#1e3a8a] text-[#f1f5f9] font-medium hover:scale-105 hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all duration-300 text-sm sm:text-base"
+      className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#1a1a1a] font-semibold hover:scale-105 hover:shadow-[0_8px_30px_rgba(255,255,255,0.3)] transition-all duration-300 text-base"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
       Book a Call
     </motion.button>
-    
+
     {/* View our Work Button */}
     <motion.button
       onClick={() => onNavigate('portfolio')}
-      className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full bg-transparent border-2 border-blue-400/50 text-[#f1f5f9] font-medium overflow-hidden transition-all duration-500 hover:scale-105 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/25 backdrop-blur-sm flex items-center justify-center gap-2 text-sm sm:text-base"
+      className="w-full sm:w-auto group relative px-8 py-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold overflow-hidden transition-all duration-500 hover:scale-105 hover:bg-white/20 hover:border-white/30 text-base"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <span className="relative z-10 flex items-center gap-2">
-        <span>View our Work</span>
-        <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-      </span>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#2e4fdc]/20 to-[#4da6ff]/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#2e4fdc] to-[#4da6ff] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+      <span className="relative z-10">View our Work</span>
     </motion.button>
   </div>
 </ScrollReveal>
 
             <ScrollReveal direction="fade" delay={400} duration={0.8}>
-              <div className="px-4 sm:px-0">
-                <h3 className="text-xs sm:text-sm text-[#FFFFFF] font-bold mb-3 sm:mb-3 text-center lg:text-left ml-2">
+              <div>
+                <h3 className="text-xs sm:text-sm text-[#9ca3af] font-semibold mb-4 sm:mb-3 text-left md:text-center lg:text-left">
                   Trusted by Industry Leaders:
                 </h3>
-                <div className="flex items-center justify-center lg:justify-start gap-6 sm:gap-8 md:gap-12 flex-wrap">
+                <div className="flex items-center justify-start md:justify-center lg:justify-start gap-8 sm:gap-8 md:gap-12">
                   <motion.img
                     src="/brand logo/google.png"
                     alt="Google"
-                    className="h-6 sm:h-8 filter brightness-0 saturate-0 hover:scale-110 transition-transform duration-300"
-                    style={{ filter: 'brightness(0) saturate(100%) invert(1) sepia(1) saturate(0.5) hue-rotate(200deg) brightness(0.9)' }}
+                    className="h-5 sm:h-6 opacity-60 hover:opacity-100 transition-all duration-300"
+                    style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
                     whileHover={{ scale: 1.1 }}
                   />
                   <motion.img
                     src="/brand logo/stripe.png"
                     alt="Stripe"
-                    className="h-10 sm:h-10 md:h-14 filter brightness-0 saturate-0 hover:scale-110 transition-transform duration-300"
-                    style={{ filter: 'brightness(0) saturate(100%) invert(1) sepia(1) saturate(0.5) hue-rotate(200deg) brightness(0.9)' }}
+                    className="h-5 sm:h-6 opacity-60 hover:opacity-100 transition-all duration-300"
+                    style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
                     whileHover={{ scale: 1.1 }}
                   />
                   <motion.img
                     src="/brand logo/vercel.png"
                     alt="Vercel"
-                    className="h-10 sm:h-10 md:h-14 filter brightness-0 saturate-0 hover:scale-110 transition-transform duration-300"
-                    style={{ filter: 'brightness(0) saturate(100%) invert(1) sepia(1) saturate(0.5) hue-rotate(200deg) brightness(0.9)' }}
+                    className="h-5 sm:h-6 opacity-60 hover:opacity-100 transition-all duration-300"
+                    style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
                     whileHover={{ scale: 1.1 }}
                   />
                 </div>
