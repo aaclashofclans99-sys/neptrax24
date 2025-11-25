@@ -55,11 +55,11 @@ export default function MobileGradientBg() {
   inset: 0;
   background: linear-gradient(
     135deg,
-    #0a0f1a 0%,      /* very dark navy */
-    #121a3a 25%,     /* dark navy blue */
-    #0d223e 50%,     /* deep blue */
-    #0a0f1a 75%,     /* very dark navy */
-    #141c2e 100%     /* dark slate blue */
+    #000000 0%,      /* black */
+    #1a0a3e 20%,     /* deep purple */
+    #4F6BED 50%,     /* vibrant blue */
+    #8B4FE9 80%,     /* deep purple */
+    #000000 100%     /* black */
   );
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;

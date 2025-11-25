@@ -40,15 +40,58 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
 
   return (
     <>
+      {/* Mobile Floating Navbar */}
+      <nav className="md:hidden fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300">
+        <div
+          className="flex items-center justify-between gap-4 px-4 py-3 rounded-full backdrop-blur-xl border border-white/10 shadow-2xl"
+          style={{
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
+            backdropFilter: 'blur(20px) saturate(180%)',
+            WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+            backgroundColor: 'rgba(13, 17, 23, 0.5)',
+          }}
+        >
+          <button
+            onClick={() => handleNavigate('home')}
+            className="flex items-center gap-2 hover:opacity-90 transition-opacity"
+          >
+            <div className="relative">
+              <img
+                src="/logo.png"
+                alt="Neptrax"
+                className="h-8 w-8 transition-transform duration-300 hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300" />
+            </div>
+            <span className="text-lg font-bold bg-gradient-to-r from-[#22d3ee] via-[#0ea5e9] to-[#5391f5] bg-clip-text text-transparent">
+              Neptrax
+            </span>
+          </button>
+
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X size={20} className="text-white" />
+            ) : (
+              <Menu size={20} className="text-white" />
+            )}
+          </button>
+        </div>
+      </nav>
+
+      {/* Desktop Navbar */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled 
-            ? 'bg-white/200 backdrop-blur-md shadow-lg'  // Removed: border-b border-white/100
+        className={`hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? 'bg-white/200 backdrop-blur-md shadow-lg'
             : 'bg-transparent'
         }`}
         style={{
-          background: scrolled 
-            ? 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)' 
+          background: scrolled
+            ? 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)'
             : 'transparent',
           backdropFilter: scrolled ? 'blur(12px) saturate(180%)' : 'none',
           WebkitBackdropFilter: scrolled ? 'blur(12px) saturate(180%)' : 'none',
@@ -61,10 +104,10 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
             className="flex items-center gap-2 sm:gap-3 hover:opacity-90 transition-opacity md:ml-12 group"
           >
             <div className="relative">
-              <img 
-                src="/logo.png" 
-                alt="Neptrax" 
-                className="h-10 w-10 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-110" 
+              <img
+                src="/logo.png"
+                alt="Neptrax"
+                className="h-10 w-10 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
@@ -102,19 +145,6 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
               <div className="absolute inset-0 shadow-[0_0_20px_rgba(37,99,235,0.3)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X size={24} className="text-white" />
-            ) : (
-              <Menu size={24} className="text-white" />
-            )}
-          </button>
         </div>
       </nav>
 

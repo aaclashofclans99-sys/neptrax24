@@ -111,13 +111,13 @@ export default function Home({ onNavigate }: HomeProps) {
   className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font text-[#f1f5f9] mb-4 sm:mb-6 leading-tight"
   style={{ fontFamily: 'Inter, sans-serif' }}
 >
-   Launch your brand online with a website built for success.
+Launch your brand online with a website built for success
 </h1>
 </ScrollReveal>
 
             <ScrollReveal direction="up" delay={200} duration={0.8}>
-              <p className="text-base sm:text-lg md:text-xl text-[#abbcd4] mb-6 sm:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-4 sm:px-0">
-                Guiding businesses from idea to digital growth with powerful websites..
+              <p className="text-base sm:text-lg md:text-xl text-[#FFFFFF] mb-6 sm:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-4 sm:px-0">
+                Guiding businesses from idea to digital growth with powerful websites
               </p>
             </ScrollReveal>
 
@@ -133,7 +133,7 @@ export default function Home({ onNavigate }: HomeProps) {
       Book a Call
     </motion.button>
     
-    {/* View Our Work Button */}
+    {/* View our Work Button */}
     <motion.button
       onClick={() => onNavigate('portfolio')}
       className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full bg-transparent border-2 border-blue-400/50 text-[#f1f5f9] font-medium overflow-hidden transition-all duration-500 hover:scale-105 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/25 backdrop-blur-sm flex items-center justify-center gap-2 text-sm sm:text-base"
@@ -141,7 +141,7 @@ export default function Home({ onNavigate }: HomeProps) {
       whileTap={{ scale: 0.95 }}
     >
       <span className="relative z-10 flex items-center gap-2">
-        <span>View Our Work</span>
+        <span>View our Work</span>
         <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
       </span>
       <div className="absolute inset-0 bg-gradient-to-r from-[#2e4fdc]/20 to-[#4da6ff]/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
@@ -152,8 +152,8 @@ export default function Home({ onNavigate }: HomeProps) {
 
             <ScrollReveal direction="fade" delay={400} duration={0.8}>
               <div className="px-4 sm:px-0">
-                <h3 className="text-xs sm:text-sm text-[#abbcd4] font-bold mb-3 sm:mb-3 text-center lg:text-left ml-2">
-                  Trusted by Industry Leaders
+                <h3 className="text-xs sm:text-sm text-[#FFFFFF] font-bold mb-3 sm:mb-3 text-center lg:text-left ml-2">
+                  Trusted by Industry Leaders:
                 </h3>
                 <div className="flex items-center justify-center lg:justify-start gap-6 sm:gap-8 md:gap-12 flex-wrap">
                   <motion.img
